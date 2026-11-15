@@ -1,0 +1,20 @@
+plugins {
+    id 'java'
+    id 'application'
+}
+
+group = 'com.psyclone.payment'
+version = '1.0.0'
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(25)
+    }
+}
+
+// No external dependencies: the brief allows only the Java standard library.
+// Gradle does not need a repositories block until we add a library.
+
+application {
+    mainClass = 'com.psyclone.payment.Main'
+}
